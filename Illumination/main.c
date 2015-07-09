@@ -20,7 +20,7 @@ int queue_y[11025];
 int howmany_queue;
 int number_of_checked_queue;
 int a;
-int map_marked[104][104];
+int map_marked[105][105];
 int ans;
 
 //int number_of_checking_x;
@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
     
     
     while (j < DATA_H) {
-        printf("now:%d,%d\n",i,j);
+        //printf("now:%d,%d\n",i,j);
         scanf("%d",&DATA[i+2][j+2]);
         if (DATA[i+2][j+2] == 1) {
             map_marked[i+2][j+2] = 2;
@@ -47,16 +47,16 @@ int main(int argc, const char * argv[]) {
     for (j = 0; j < DATA_H+4; j ++) {
         
         if (j%2 == 0) {
-            printf(" ");
+            //printf(" ");
         }
         
         for (i = 0; i < DATA_W+4; i ++) {
-            printf("%d ",map_marked[i][j]);
+            //printf("%d ",map_marked[i][j]);
         }
-        printf("\n");
+        //printf("\n");
     }
     
-    printf("\n\n");
+    //printf("\n\n");
     
     //    number_of_checking_x = 0;
     //    number_of_checking_y = 0;
@@ -69,11 +69,11 @@ int main(int argc, const char * argv[]) {
     
     while (howmany_queue > number_of_checked_queue) {
         
-        printf("queue:{");
+        //printf("queue:{");
         for (i = number_of_checked_queue; i < howmany_queue; i ++) {
-            printf("(%d,%d)",queue_x[i],queue_y[i]);
+            //printf("(%d,%d)",queue_x[i],queue_y[i]);
         }
-        printf("}\n");
+        //printf("}\n");
         
         
         a = number_of_checked_queue;
@@ -154,12 +154,12 @@ int main(int argc, const char * argv[]) {
                 
             } else {
                 
-//                if (map_marked[queue_x[a]-1][queue_y[a]-1] == 0) {
-//                    map_marked[queue_x[a]-1][queue_y[a]-1] = 1;
-//                    queue_x[howmany_queue] = queue_x[a]-1;
-//                    queue_y[howmany_queue] = queue_y[a]-1;
-//                    howmany_queue ++;
-//                }
+                //                if (map_marked[queue_x[a]-1][queue_y[a]-1] == 0) {
+                //                    map_marked[queue_x[a]-1][queue_y[a]-1] = 1;
+                //                    queue_x[howmany_queue] = queue_x[a]-1;
+                //                    queue_y[howmany_queue] = queue_y[a]-1;
+                //                    howmany_queue ++;
+                //                }
                 
                 if (map_marked[queue_x[a]-1][queue_y[a]-0] == 0) {
                     map_marked[queue_x[a]-1][queue_y[a]-0] = 1;
@@ -168,12 +168,12 @@ int main(int argc, const char * argv[]) {
                     howmany_queue ++;
                 }
                 
-//                if (map_marked[queue_x[a]-1][queue_y[a]+1] == 0) {
-//                    map_marked[queue_x[a]-1][queue_y[a]+1] = 1;
-//                    queue_x[howmany_queue] = queue_x[a]-1;
-//                    queue_y[howmany_queue] = queue_y[a]+1;
-//                    howmany_queue ++;
-//                }
+                //                if (map_marked[queue_x[a]-1][queue_y[a]+1] == 0) {
+                //                    map_marked[queue_x[a]-1][queue_y[a]+1] = 1;
+                //                    queue_x[howmany_queue] = queue_x[a]-1;
+                //                    queue_y[howmany_queue] = queue_y[a]+1;
+                //                    howmany_queue ++;
+                //                }
                 
                 if (map_marked[queue_x[a]-0][queue_y[a]-1] == 0) {
                     map_marked[queue_x[a]-0][queue_y[a]-1] = 1;
@@ -196,12 +196,12 @@ int main(int argc, const char * argv[]) {
                     howmany_queue ++;
                 }
                 
-                            if (map_marked[queue_x[a]+1][queue_y[a]-1] == 0) {
-                                map_marked[queue_x[a]+1][queue_y[a]-1] = 1;
-                                queue_x[howmany_queue] = queue_x[a]+1;
-                                queue_y[howmany_queue] = queue_y[a]-1;
-                                howmany_queue ++;
-                            }
+                if (map_marked[queue_x[a]+1][queue_y[a]-1] == 0) {
+                    map_marked[queue_x[a]+1][queue_y[a]-1] = 1;
+                    queue_x[howmany_queue] = queue_x[a]+1;
+                    queue_y[howmany_queue] = queue_y[a]-1;
+                    howmany_queue ++;
+                }
                 
                 if (map_marked[queue_x[a]+1][queue_y[a]-0] == 0) {
                     map_marked[queue_x[a]+1][queue_y[a]-0] = 1;
@@ -210,12 +210,12 @@ int main(int argc, const char * argv[]) {
                     howmany_queue ++;
                 }
                 
-                            if (map_marked[queue_x[a]+1][queue_y[a]+1] == 0) {
-                                map_marked[queue_x[a]+1][queue_y[a]+1] = 1;
-                                queue_x[howmany_queue] = queue_x[a]+1;
-                                queue_y[howmany_queue] = queue_y[a]+1;
-                                howmany_queue ++;
-                            }
+                if (map_marked[queue_x[a]+1][queue_y[a]+1] == 0) {
+                    map_marked[queue_x[a]+1][queue_y[a]+1] = 1;
+                    queue_x[howmany_queue] = queue_x[a]+1;
+                    queue_y[howmany_queue] = queue_y[a]+1;
+                    howmany_queue ++;
+                }
                 
                 
                 
@@ -229,18 +229,18 @@ int main(int argc, const char * argv[]) {
         for (j = 0; j < DATA_H+4; j ++) {
             
             if (j%2 == 0) {
-                printf(" ");
+                //printf(" ");
             }
             
             for (i = 0; i < DATA_W+4; i ++) {
                 /*if (map_marked[i][j] == 1) {
                  map_marked[i][j] = 0;
                  }*/
-                printf("%d ",map_marked[i][j]);
+                //printf("%d ",map_marked[i][j]);
             }
-            printf("\n");
+            //printf("\n");
         }
-        printf("\n");
+        //printf("\n");
         
         
     }
@@ -249,16 +249,16 @@ int main(int argc, const char * argv[]) {
     for (j = 0; j < DATA_H+4; j ++) {
         
         if (j%2 == 0) {
-            printf(" ");
+            //printf(" ");
         }
         
         for (i = 0; i < DATA_W+4; i ++) {
             /*if (map_marked[i][j] == 1) {
              map_marked[i][j] = 0;
              }*/
-            printf("%d ",map_marked[i][j]);
+            //printf("%d ",map_marked[i][j]);
         }
-        printf("\n");
+        //printf("\n");
     }
     
     for (j = 2; j < DATA_H + 2; j ++) {
@@ -330,3 +330,5 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+
