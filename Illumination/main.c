@@ -12,11 +12,11 @@
 
 int DATA_W;
 int DATA_H;
-int DATA[104][104];
+int DATA[105][105];
 int i;
 int j;
-int queue_x[10816];
-int queue_y[10816];
+int queue_x[11025];
+int queue_y[11025];
 int howmany_queue;
 int number_of_checked_queue;
 int a;
